@@ -1,0 +1,140 @@
+<div class="button-container">
+  <div class="button" onclick="redirectToPage('https://saratoffice.blogspot.com/p/bill.html')">
+    <img src="https://1.bp.blogspot.com/-8epGx_Jnwmo/YVk8NdM2zlI/AAAAAAAAITc/y9ZdsDqrq7EGxWS1JJFPvfEYZeCZjX6EwCLcBGAsYHQ/w270-h131-p-k-no-nu/61%2B%25281%2529.jpg" alt="Project Manager" />
+    <div class="button-text">
+      <h3>Project Manager</h3>
+      <p>139 Jobs available</p>
+    </div>
+  </div>
+
+  <div class="button" onclick="redirectToPage('page2.html')">
+    <img src="https://1.bp.blogspot.com/-4aCPq6_uag0/YVk8NmWms-I/AAAAAAAAITg/BlJFv5yhf3gmAB_IlKWixxHz8HPlaACwwCLcBGAsYHQ/w270-h131-p-k-no-nu/62%2B%25281%2529.jpg" alt="Delivery Driver" />
+    <div class="button-text">
+      <h3>Delivery Driver</h3>
+      <p>260 Jobs available</p>
+    </div>
+  </div>
+
+  <div class="button" onclick="redirectToPage('page3.html')">
+    <img src="https://1.bp.blogspot.com/-dgU5PzD_800/YVk8N0E_L1I/AAAAAAAAITk/EYwQWzAMU2YzVcndTUjSgyE1-l6yLXtEgCLcBGAsYHQ/w270-h131-p-k-no-nu/63%2B%25281%2529.jpg" alt="Accounting" />
+    <div class="button-text">
+      <h3>Accounting</h3>
+      <p>97 Jobs available</p>
+    </div>
+  </div>
+
+  <div class="button" onclick="redirectToPage('page4.html')">
+    <img src="https://1.bp.blogspot.com/-lVI17sfgSGk/YVk8OFn3dLI/AAAAAAAAITo/ObsPRU6FDFw9iKYUlNIkObdI7Rwa3gprQCLcBGAsYHQ/w270-h131-p-k-no-nu/64%2B%25281%2529.jpg" alt="Customer Service" />
+    <div class="button-text">
+      <h3>Customer Service</h3>
+      <p>364 Jobs available</p>
+    </div>
+  </div>
+
+  <div class="button" onclick="redirectToPage('page5.html')">
+    <img src="https://1.bp.blogspot.com/-f1q6MM3pPcA/YVk8MoTUU5I/AAAAAAAAITU/6H8ABCjXPWIuTwZF_5tVR69oG5_kiIkvQCLcBGAsYHQ/w270-h131-p-k-no-nu/59%2B%25281%2529.jpg" alt="Data Science" />
+    <div class="button-text">
+      <h3>Data Science</h3>
+      <p>187 Jobs available</p>
+    </div>
+  </div>
+
+  <div class="button" onclick="redirectToPage('page6.html')">
+    <img src="https://1.bp.blogspot.com/-lXn8WdgbomU/YVk8KPywFNI/AAAAAAAAIS4/JQjD9G4ZOj8bJMLq5b7htLOd5RV7uKt6gCLcBGAsYHQ/w270-h131-p-k-no-nu/53%2B%25281%2529.jpg" alt="Engineering" />
+    <div class="button-text">
+      <h3>Engineering</h3>
+      <p>427 Jobs available</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function redirectToPage(pageUrl) {
+    window.location.href = pageUrl;
+  }
+</script>
+
+<style type="text/css">
+  /* Container for buttons */
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  /* Style for each button */
+  .button {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .button img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    z-index: 1;
+  }
+
+  .button-text h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .button-text p {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  /* Hover effects */
+  .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .button:hover img {
+    opacity: 1;
+  }
+  .button:hover .button-text h3, 
+.button:hover .button-text p {
+  color: red;
+}
+
+  .button:hover .button-text {
+    color: red;
+  }
+
+  /* Responsive design for small screens */
+  @media (max-width: 600px) {
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button {
+      width: 90%;
+      height: 80px;
+    }
+  }
+</style>
+
